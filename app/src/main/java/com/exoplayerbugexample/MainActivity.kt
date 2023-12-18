@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.OptIn
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -27,9 +28,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.media3.common.util.UnstableApi
+import androidx.media3.ui.AspectRatioFrameLayout
+import androidx.media3.ui.PlayerView
 import com.exoplayerbugexample.theme.ExoPlayerComposeTheme
-import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
-import com.google.android.exoplayer2.ui.PlayerView
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
@@ -135,6 +137,7 @@ private fun ControlButtons(
     }
 }
 
+@OptIn(UnstableApi::class)
 @Composable
 private fun ExoPlayer(
     state: ExoPlayerState,

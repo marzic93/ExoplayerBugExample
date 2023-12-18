@@ -57,9 +57,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.8.1")
 
-    val exoplayerVersion = "2.19.1"
-    implementation("com.google.android.exoplayer:exoplayer:$exoplayerVersion")
-    implementation("com.google.android.exoplayer:exoplayer-ui:$exoplayerVersion")
+    val exoplayerVersion = "1.2.0"
+    implementation("androidx.media3:media3-exoplayer:$exoplayerVersion")
+    implementation("androidx.media3:media3-ui:$exoplayerVersion")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
